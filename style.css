@@ -1,7 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  background: black;
+}
+
+:root {
+    /* Colors */
+    --brand-primary: #5D5FEF;
+    --brand-secondary: #00E4C9;
+    --action-error: #F61775;
+    --action-warning: #FFA800;
+    /* Night Theme */
+    --night-primary: #3F4071;
+    --night-secondary: #20214A;
+    --night-tertiary: #080827;
+    /* Light Theme */
+    --light-primary: #FFFFFF;
+    --light-secondary: #D9D9FF;
+    --light-tertiary: #A3A4F9;
+    /* Typefaces */
+    --type-normal: "Plus Jakarta Sans";
+    --type-mono: "IBM Plex Mono";
+    /* Font Sizes */
+    --size-header: 36px;
+    --size-body: 18px;
+    --size-button: 15px;
+}
+
+.theme-light {
+  background: var(--light-tertiary);
+}
+
+.theme-night {
+  background: var(--night-tertiary);
 }
 
 .tabs {
@@ -9,15 +41,15 @@ body {
   align-items: center;
 }
 
-.tab {
+.theme-night .tab {
   width: 115px;
   height: 30px;
   display: flex;
-  padding: 15px;
-  background: white;
   margin-right: 20px;
-  border-radius: 2px;
   align-items: center;
+  padding: 12px 20px 10px 15px;
+  border-radius: 10px 10px 0px 0px;
+  background: var(--night-primary);
 }
 
 .new-tab {
