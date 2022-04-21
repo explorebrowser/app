@@ -4,18 +4,23 @@
         <meta charset="UTF-8">
         <title>New Tab | Explore</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     </head>
     <body class="theme-night">
       <div id="tabs" class="tabs">
         <div class="tab" id="tab">
           <p id="tab-name">New Tab</p>
-          <button class="close-tab" id="close-tab" onclick="closeTab()"><center>x</center></button>
+          <button class="close-tab" id="close-tab" onclick="closeTab()">×</button>
         </div>
         <button id="new-tab" class="new-tab" onclick="newtab()"></button>
       </div>
       <div class="top-navigation">
-        <input type="text" placeholder="What will you explore today?">
+        <input id="search-box" type="text" placeholder="What will you explore today?">
       </div>
+      <iframe id="webpage" name="webpage" src="newtab.html"></iframe>
+      <p class="footer-left"><em>v0.0.0</em></p>
+      <p class="footer-right"><em>The Explore Project</em></p>
+      <script src="search.js"></script>
       <script src="tabs.js"></script>
     </body>
 </html>

@@ -1,18 +1,21 @@
 var tabs = 1;
 var openTab = 1;
+
+setInterval(function() {}, 1000);
+
 function newtab() {
 
   const allTabs = document.querySelectorAll('.tab');
 
   allTabs.forEach(tab => {
-    tab.style.backgroundColor = 'grey';
+    tab.style.backgroundColor = 'var(--night-secondary)';
   });
   
   const newButton = document.getElementById('new-tab');
   newButton.remove();
   
   const tab = document.createElement("div");
-  tab.innerHTML = "<p id='tab-name'>New Tab</p><button class='close-tab' id='close-tab' onclick='this.parentElement.remove();'><center>x</center></button>";
+  tab.innerHTML = "<p id='tab-name'>New Tab</p><button class='close-tab' id='close-tab' onclick='closeTab()'>×</button>";
   tab.setAttribute('class', 'tab');
   tab.setAttribute('id', 'tab');
   document.getElementById("tabs").appendChild(tab);
